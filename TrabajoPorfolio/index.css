@@ -1,0 +1,707 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Color de fondo para las secciones alternadas */
+.section-color-1 {
+    background-color: #1E3E62 ; /* Color 1 */
+    color: #fff;
+}
+
+.section-color-2 {
+    background-color: #0B192C ; /* Color 2 */
+    color: #fff;
+}
+
+/* Header */
+#main-header {
+    color: #fff;
+    padding: 1.5rem 2rem;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Asegura que se quede en la parte superior */
+    left: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    z-index: 100; /* Asegura que el header esté encima de otros elementos */
+}
+
+/* Header Container */
+#header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+#logo img {
+    height: 4rem;
+}
+
+/* Menu */
+#menu a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+}
+
+#menu a:hover {
+    color: #ff9900;
+}
+
+/* Hire Me Button */
+#hire-me a {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#hire-me a:hover {
+    background-color: #e68900;
+}
+
+/* Añadir espaciado en el cuerpo para que el contenido no se quede oculto bajo el header */
+body {
+    padding-top: 5rem; /* Ajusta este valor para que el contenido se vea correctamente debajo del header */
+}
+
+
+/* Home Section */
+#home {
+    padding: 5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Evitar que los elementos se apilen */
+}
+
+#intro {
+    flex: 1; /* Ocupa todo el espacio disponible a la izquierda */
+    margin-right: 2rem; /* Separar del #hero-image */
+}
+
+#intro h1 {
+    font-size: 2.5rem; /* Tamaño grande para destacar el nombre */
+    line-height: 1.2; /* Mejor separación entre líneas */
+    margin-bottom: 1.5rem;
+}
+
+#intro h1 span {
+    color: #ff9900;
+    font-weight: bold; /* Resaltar el texto */
+}
+
+#intro h2 {
+    font-size: 1.8rem; /* Reducir ligeramente para complementar el h1 */
+    margin-bottom: 1rem;
+}
+
+#intro h2 span {
+    color: #ff9900;
+    font-weight: bold;
+}
+
+#intro p {
+    font-size: 1.1rem; /* Aumentar el tamaño para mejorar la legibilidad */
+    line-height: 1.6; /* Más espacio entre líneas */
+    margin-bottom: 2rem;
+}
+
+#redes {
+    display: flex;
+    gap: 1rem; /* Espacio uniforme entre iconos */
+    margin-bottom: 1.5rem;
+}
+
+#redes svg {
+    width: 2.5rem; /* Tamaño mayor para mayor visibilidad */
+    height: 2.5rem;
+    fill: #ff9900; /* Coincide con el color del énfasis */
+    cursor: pointer;
+    transition: transform 0.2s, fill 0.2s;
+}
+
+#redes svg:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento */
+    fill: #ff6600; /* Color más intenso al pasar el ratón */
+}
+
+#cvv {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #ff9900;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#cvv:hover {
+    background-color: #ff6600; /* Cambio de color al pasar el ratón */
+}
+
+#hero-image {
+    flex: 1; /* Ocupa el espacio disponible a la derecha */
+    text-align: right; /* Alinear el contenido del div hacia la derecha */
+}
+
+#hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* About Me Section */
+#aboutMe {
+    padding: 4rem 5%;
+    text-align: left;
+    color: #fff; /* Texto en blanco */
+}
+
+#aboutMe h1 {
+    font-size: 2.8em;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #f9f9f9; /* Blanco suave */
+    font-weight: bold;
+}
+
+#aboutMe .content {
+    display: flex;
+    align-items: center; /* Centra verticalmente texto e imagen */
+    justify-content: center; /* Centra horizontalmente en el espacio */
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 30%; /* Imagen más pequeña */
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+    border: 2px solid #444; /* Bordes oscuros */
+}
+
+.about-text {
+    flex: 2;
+    max-width: 60%; /* Más espacio para el texto */
+    text-align: justify;
+    color: #fff; /* Texto en blanco */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el texto dentro de su contenedor */
+}
+
+.about-text h2 {
+    font-size: 2em;
+    color: #f9f9f9; /* Blanco suave */
+    margin-bottom: 1rem;
+    font-weight: 600;
+    border-bottom: 2px solid #555; /* Línea sutil debajo del subtítulo */
+    display: inline-block;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-top: 1rem;
+    color: #ddd; /* Blanco tenue para contraste */
+}
+
+
+/* My Services Section */
+#myServices {
+    text-align: center;
+    padding: 4rem 5%;
+}
+
+#myServices h1 {
+    font-size: 2.8em;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.service {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 18rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+.service svg {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+}
+
+.service h2 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+
+/* My Skills Section */
+#mySkills {
+    padding: 4rem 5%; /* Espaciado alrededor */
+    text-align: center;
+}
+
+#mySkills h1 {
+    font-size: 2.8em;
+    margin: 0 auto 2rem auto;
+    font-weight: bold;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+/* Contenedor de habilidades */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Espaciado vertical entre barras */
+    width: 100%; /* Ocupar todo el ancho */
+}
+
+/* Cada habilidad */
+.skill {
+    width: 90%; /* Hacer que las barras ocupen casi todo el ancho del contenedor */
+    max-width: 1200px; /* Limitar el ancho máximo para pantallas grandes */
+    text-align: left;
+}
+
+/* Etiqueta de la habilidad */
+.skill span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Contenedor de la barra de habilidad */
+.skill-bar-container {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    height: 1.5rem;
+    width: 100%; /* Barra ocupa todo el ancho del contenedor */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Barra de progreso */
+.skill-bar {
+    background-color: #ff9900;
+    height: 100%;
+    width: var(--progress);
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+
+/* Portfolio Section */
+#portfolio {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+#portfolio h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Flexbox Layout */
+.portfolio-flex {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos salten a la siguiente fila */
+    gap: 2rem; /* Espaciado entre elementos */
+    justify-content: center; /* Centrar las filas */
+}
+
+.portfolio-item {
+    flex: 1 1 30%; /* Cada item ocupa el 30% del ancho disponible */
+    min-width: 250px; /* Ancho mínimo */
+    max-width: 320px; /* Ancho máximo */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.portfolio-item h3 {
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Contact Section */
+#contact {
+    padding: 4rem 5%;
+    text-align: center;
+    color: #fff; /* Texto blanco */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo el contenido horizontalmente */
+    justify-content: flex-start; /* Alinear todo al inicio (arriba) */
+    min-height: 100vh; /* Asegura que la sección ocupe toda la altura de la pantalla */
+}
+
+#contact h1 {
+    font-size: 2.8em;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    text-align: center; /* Mantener el título centrado */
+}
+
+/* Contenedor principal */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap; /* Asegura que los elementos se ajusten en pantallas más pequeñas */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-top: 2rem; /* Añade un poco de espacio entre el título y el contenido */
+}
+
+/* Información de contacto */
+.contact-info {
+    flex: 1 1 30%; /* Flexibilidad para ocupar el 30% del ancho */
+    min-width: 250px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinea verticalmente el contenido */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.contact-info p {
+    font-size: 1.5rem; /* Aumenta el tamaño del texto */
+    margin-bottom: 1.5rem; /* Mayor espacio entre las líneas */
+}
+
+.contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+/* Formulario de contacto */
+.contact-form {
+    flex: 1 1 35%; /* Hacer la parte del formulario más ancha */
+    min-width: 250px;
+    max-width: 450px; /* Ampliar el tamaño máximo del formulario */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Espaciado entre los campos */
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Borde simple, sin recuadro */
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ff9900; /* Resaltar el borde al enfocarse */
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #e68900;
+}
+
+/* Footer */
+footer {
+    background-color: #1E3E62; /* Utiliza el color de fondo de las secciones alternadas */
+    color: #fff; /* Texto blanco */
+    padding: 2rem 5%; /* Añadir espaciado adecuado a los lados */
+    font-size: 1.2rem; /* Tamaño de texto legible */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+footer p {
+    margin: 0; /* Elimina cualquier margen predeterminado */
+    font-weight: 300; /* Peso de fuente más ligero para el texto */
+}
+
+footer p:hover {
+    color: #ff9900; /* Cambio de color al pasar el ratón */
+}
+
+/* Small devices (phones, 600px and below) */
+@media (max-width: 600px) {
+    /* Header */
+    #main-header {
+        padding: 1rem;
+    }
+
+    #header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #logo img {
+        height: 3rem;
+    }
+
+    #menu a {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    /* Home Section */
+    #home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #intro {
+        margin-right: 0;
+    }
+
+    #intro h1 {
+        font-size: 2rem;
+    }
+
+    #intro h2 {
+        font-size: 1.5rem;
+    }
+
+    #hero-image {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    /* About Me Section */
+    #aboutMe {
+        padding: 3rem 2%;
+    }
+
+    .about-image {
+        max-width: 50%;
+    }
+
+    .about-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* My Services Section */
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* My Skills Section */
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skill {
+        width: 90%;
+    }
+
+    /* Portfolio Section */
+    .portfolio-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-item {
+        width: 80%;
+        max-width: none;
+    }
+
+    /* Contact Section */
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info,
+    .contact-form {
+        flex: 1 1 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+/* Medium devices (tablets, 768px and above) */
+@media (min-width: 768px) {
+    /* Header */
+    #menu a {
+        font-size: 1.4rem;
+    }
+
+    /* Home Section */
+    #home {
+        padding: 4rem 2rem;
+    }
+
+    #intro h1 {
+        font-size: 2.2rem;
+    }
+
+    #intro h2 {
+        font-size: 1.7rem;
+    }
+
+    /* About Me Section */
+    .about-image {
+        max-width: 40%;
+    }
+
+    .about-text {
+        max-width: 55%;
+    }
+
+    /* My Services Section */
+    .services-container {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .service {
+        width: 25%;
+    }
+
+    /* Portfolio Section */
+    .portfolio-item {
+        width: 30%;
+    }
+
+    /* Contact Section */
+    .contact-container {
+        flex-direction: row;
+    }
+
+    .contact-info,
+    .contact-form {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+/* Large devices (desktops, 1200px and above) */
+@media (min-width: 1200px) {
+    /* Header */
+    #menu a {
+        font-size: 1.6rem;
+    }
+
+    /* Home Section */
+    #home {
+        padding: 6rem 4rem;
+    }
+
+    #intro h1 {
+        font-size: 2.5rem;
+    }
+
+    #intro h2 {
+        font-size: 2rem;
+    }
+
+    /* About Me Section */
+    .about-image {
+        max-width: 30%;
+    }
+
+    .about-text {
+        max-width: 60%;
+    }
+
+    /* My Services Section */
+    .service {
+        width: 18rem;
+    }
+
+    /* Portfolio Section */
+    .portfolio-item {
+        width: 30%;
+    }
+
+    /* Contact Section */
+    .contact-container {
+        flex-direction: row;
+    }
+
+    .contact-info,
+    .contact-form {
+        flex: 1 1 45%;
+    }
+}
